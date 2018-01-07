@@ -19,9 +19,57 @@ There are $x$ units in Tactics. They are:
 * Maceman
 * Spearman
 
+
+
+
+
+Each unit has:
+
+* Attack Type
+* Attack Pattern
+* Damage
+* Defense
+* Movement
+* Sight
+
 ### Swordsman
+
+*Attack Type*: Melee
+
+*Attack Pattern*: 
+
+*Damage*:
+
+*Defense*:
+
+*Movement*:
+
+*Sight*:
 
 ### Maceman
 
+*Attack Type*: Melee
+
+*Attack Pattern*: 
+
+*Damage*:
+
+*Defense*:
+
+*Movement*:
+
+*Sight*:
+
 ### Spearman
 
+*Attack Type*: Melee
+
+*Attack Pattern*: 
+
+*Damage*:
+
+*Defense*:
+
+*Movement*:
+
+*Sight*:
