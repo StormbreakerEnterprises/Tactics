@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -691,7 +692,92 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fK3-D4-XGT">
+                                <rect key="frame" x="190" y="85" width="100" height="100"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-sh-OKS">
+                                        <rect key="frame" x="4" y="63" width="92" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="1td-Cc-eT0"/>
+                                            <constraint firstAttribute="height" constant="20" id="Q4X-6E-loM"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="igc-E2-lfS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="newGamePressed:" target="XfG-lQ-9wD" id="fbw-mx-yJ3"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7kT-jZ-jHO">
+                                        <rect key="frame" x="4" y="33" width="92" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="2CC-1p-YfV"/>
+                                            <constraint firstAttribute="width" constant="80" id="ZFE-TR-xQf"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fos-uf-nL7">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="loadGamePressed:" target="XfG-lQ-9wD" id="7bw-Kb-mp8"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
+                                        <rect key="frame" x="4" y="3" width="92" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Cxk-9x-fM8"/>
+                                            <constraint firstAttribute="height" constant="20" id="Yse-kL-XeS"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gga-F2-tJ9">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="tutorialPressed:" target="XfG-lQ-9wD" id="mtP-J1-WAT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WMV-0v-TDp" firstAttribute="leading" secondItem="fK3-D4-XGT" secondAttribute="leading" constant="10" id="5j4-as-ZbL"/>
+                                    <constraint firstItem="Mgg-sh-OKS" firstAttribute="centerX" secondItem="fK3-D4-XGT" secondAttribute="centerX" id="B90-sh-qZu"/>
+                                    <constraint firstItem="7kT-jZ-jHO" firstAttribute="centerX" secondItem="fK3-D4-XGT" secondAttribute="centerX" id="DUN-qq-TPX"/>
+                                    <constraint firstItem="WMV-0v-TDp" firstAttribute="centerX" secondItem="fK3-D4-XGT" secondAttribute="centerX" id="IEH-32-iIy"/>
+                                    <constraint firstItem="Mgg-sh-OKS" firstAttribute="top" secondItem="fK3-D4-XGT" secondAttribute="top" constant="10" id="MN7-8W-x8c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mgg-sh-OKS" secondAttribute="trailing" constant="10" id="MY0-uj-0Nx"/>
+                                    <constraint firstItem="Mgg-sh-OKS" firstAttribute="leading" secondItem="fK3-D4-XGT" secondAttribute="leading" constant="10" id="P6f-I8-UEx"/>
+                                    <constraint firstAttribute="trailing" secondItem="WMV-0v-TDp" secondAttribute="trailing" constant="10" id="Wv7-rW-Iv4"/>
+                                    <constraint firstItem="7kT-jZ-jHO" firstAttribute="leading" secondItem="fK3-D4-XGT" secondAttribute="leading" constant="10" id="bKh-8N-WVH"/>
+                                    <constraint firstAttribute="height" constant="100" id="inA-Cf-8Pi"/>
+                                    <constraint firstAttribute="width" constant="100" id="mWr-p0-2AR"/>
+                                    <constraint firstAttribute="trailing" secondItem="7kT-jZ-jHO" secondAttribute="trailing" constant="10" id="wXQ-0Y-DWt"/>
+                                    <constraint firstItem="7kT-jZ-jHO" firstAttribute="centerY" secondItem="fK3-D4-XGT" secondAttribute="centerY" id="yPX-nP-zQl"/>
+                                    <constraint firstAttribute="bottom" secondItem="WMV-0v-TDp" secondAttribute="bottom" constant="10" id="yur-FU-fm8"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fK3-D4-XGT" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="otU-7M-TeE"/>
+                            <constraint firstItem="fK3-D4-XGT" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sQa-H3-rQ3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadGameButton" destination="7kT-jZ-jHO" id="o4t-Jr-bc8"/>
+                        <outlet property="menuButtonsView" destination="fK3-D4-XGT" id="ZcK-Op-MTg"/>
+                        <outlet property="newGameButton" destination="Mgg-sh-OKS" id="PzG-b5-qEh"/>
+                        <outlet property="tutorial" destination="WMV-0v-TDp" id="Osg-f2-eAU"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

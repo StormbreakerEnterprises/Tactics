@@ -12,7 +12,10 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.setFrameSize(NSMakeSize(1000, 750))
+        self.view.setFrameSize(NSMakeSize(1366, 768))
+        newGameButton.title = "New Game"
+        loadGameButton.title = "Load Game"
+        tutorial.title = "Tutorial"
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +25,22 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBOutlet weak var newGameButton: NSButton!
+    @IBOutlet weak var loadGameButton: NSButton!
+    @IBOutlet weak var tutorial: NSButton!
+    @IBOutlet weak var menuButtonsView: NSStackView!
+    
+    @IBAction func tutorialPressed(_ sender: NSButton) {
+        menuButtonsView.isHidden = true
+        print("tutorial")
+    }
+    @IBAction func loadGamePressed(_ sender: NSButton) {
+        menuButtonsView.isHidden = true
+        print("load")
+    }
+    @IBAction func newGamePressed(_ sender: NSButton) {
+        menuButtonsView.isHidden = true
+        print("new")
+    }
 }
 
