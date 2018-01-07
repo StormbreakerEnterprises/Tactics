@@ -13,13 +13,23 @@ Tactics is turn-based. On each turn, you:
 
 ## Units
 
-There are 4 units in Tactics. They are:
+There are 15 units in Tactics. They are:
 
 * Swordsman
 * Maceman
 * Spearman
 * Scout
 * Bowman
+* Catapult
+* Siege Tower
+* Battering Ram
+* Wizard
+* Paratroopers
+* Horsemen
+* Tank
+* Cannon
+* Medic
+* Healer
 
 
 
@@ -48,9 +58,9 @@ Ranged units also have:
 
 *Defense*:
 
-*Movement*:
+*Movement*: 2
 
-*Sight*: 2
+*Sight*: 3
 
 ### Maceman
 
@@ -62,9 +72,9 @@ Ranged units also have:
 
 *Defense*:
 
-*Movement*:
+*Movement*: 2
 
-*Sight*: 2
+*Sight*: 3
 
 ### Spearman
 
@@ -76,9 +86,9 @@ Ranged units also have:
 
 *Defense*:
 
-*Movement*:
+*Movement*: 2
 
-*Sight*: 2
+*Sight*: 3
 
 ### Scout
 
@@ -90,9 +100,9 @@ Ranged units also have:
 
 *Defense*:
 
-*Movement*:
+*Movement*: 3
 
-*Sight*: 3
+*Sight*: 4
 
 ### Bowman
 
@@ -106,9 +116,29 @@ Ranged units also have:
 
 *Defense*:
 
-*Movement*:
+*Movement*: 2
 
-*Sight*: 2
+*Sight*: 3
+
+### Catapult
+
+### Siege tower
+
+### Battering Ram
+
+### Wizard
+
+### Paratroopers
+
+### Horsemen
+
+### Tank
+
+### Cannon
+
+### Medic
+
+### Healer
 
 ## Buildings
 
