@@ -12,7 +12,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.setFrameSize(NSMakeSize(1000, 750))
         // Do any additional setup after loading the view.
     }
 
