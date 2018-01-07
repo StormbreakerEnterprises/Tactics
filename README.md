@@ -45,7 +45,7 @@ Each unit has:
 
 *Movement*:
 
-*Sight*:
+*Sight*: 2
 
 ### Maceman
 
@@ -59,7 +59,7 @@ Each unit has:
 
 *Movement*:
 
-*Sight*:
+*Sight*: 2
 
 ### Spearman
 
@@ -73,7 +73,7 @@ Each unit has:
 
 *Movement*:
 
-*Sight*:
+*Sight*: 2
 
 ### Scout
 
@@ -87,4 +87,17 @@ Each unit has:
 
 *Movement*:
 
-*Sight*:
+*Sight*: 3
+
+## Buildings
+
+Tactics also allows the construction of buildings. There are 2 buildings in the game:
+
+* Watchtower
+* Guard tower
+
+
+
+Each building has:
+
+* Health
