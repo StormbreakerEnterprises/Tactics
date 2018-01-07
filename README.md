@@ -13,7 +13,7 @@ Tactics is turn-based. On each turn, you:
 
 ## Units
 
-There are $x$ units in Tactics. They are:
+There are 3 units in Tactics. They are:
 
 * Swordsman
 * Maceman
