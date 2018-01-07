@@ -6,5 +6,5 @@
 #58005b - Purple team unit color
 
 
-#482C00 - Weapon handles
-#333333 - Weapon steel
+#482C00 - Weapon handles (Brown)
+#333333 - Weapon steel (Gray)
