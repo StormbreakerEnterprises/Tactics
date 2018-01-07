@@ -8,5 +8,6 @@
 
 #482C00 - Weapon handles (Brown)
 #333333 - Weapon steel (Gray)
+#2A2A2A - Slightly Darker Weapon steel (Gray)
 #cc0000 - Instructions highlight (Red)
 50% - Instructions unit size
