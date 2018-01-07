@@ -19,6 +19,7 @@ There are 4 units in Tactics. They are:
 * Maceman
 * Spearman
 * Scout
+* Bowman
 
 
 
@@ -32,6 +33,10 @@ Each unit has:
 * Defense
 * Movement
 * Sight
+
+Ranged units also have:
+
+* Attack Range
 
 ### Swordsman
 
@@ -88,6 +93,22 @@ Each unit has:
 *Movement*:
 
 *Sight*: 3
+
+### Bowman
+
+*Attack Type*: Ranged
+
+*Attack Range*: 2
+
+*Attack Pattern*: Single Target
+
+*Damage*:
+
+*Defense*:
+
+*Movement*:
+
+*Sight*: 2
 
 ## Buildings
 
