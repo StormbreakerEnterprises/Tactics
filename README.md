@@ -122,23 +122,149 @@ Ranged units also have:
 
 ### Catapult
 
+*Attack Type*: Ranged
+
+*Attack Range*: 2
+
+*Attack Pattern*: Single Target
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 1
+
+*Sight*: 3
+
 ### Siege tower
+
+*Attack Type*: Siege
+
+*Attack Pattern*: Frontal 1
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 3
 
 ### Battering Ram
 
+*Attack Type*: Siege
+
+*Attack Pattern*: Frontal 1
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 3
+
 ### Wizard
+
+*Attack Type*: Ranged
+
+*Attack Range*: 2
+
+*Attack Pattern*: 1 Tile Area of Effect
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 3
 
 ### Paratroopers
 
+*Attack Type*: Melee
+
+*Attack Pattern*: Frontal 1
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 3
+
 ### Horsemen
+
+*Attack Type*: Melee
+
+*Attack Pattern*: Frontal 1
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 4
+
+*Sight*: 3
 
 ### Tank
 
+*Attack Type*: Melee
+
+*Attack Pattern*: Frontal 3
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 2
+
 ### Cannon
+
+*Attack Type*: Ranged
+
+*Attack Range*: 1
+
+*Attack Pattern*: Line 2
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 1
+
+*Sight*: 3
 
 ### Medic
 
+*Attack Type*: Melee
+
+*Attack Pattern*: Frontal 1
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 3
+
 ### Healer
+
+*Attack Type*: Melee
+
+*Attack Pattern*: 1 Tile Area of Effect
+
+*Damage*:
+
+*Defense*:
+
+*Movement*: 2
+
+*Sight*: 3
 
 ## Buildings
 
