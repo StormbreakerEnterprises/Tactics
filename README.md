@@ -36,7 +36,7 @@ Each unit has:
 
 *Attack Type*: Melee
 
-*Attack Pattern*: 
+*Attack Pattern*: Frontal 3
 
 *Damage*:
 
@@ -50,7 +50,7 @@ Each unit has:
 
 *Attack Type*: Melee
 
-*Attack Pattern*: 
+*Attack Pattern*: Frontal 5
 
 *Damage*:
 
@@ -64,7 +64,7 @@ Each unit has:
 
 *Attack Type*: Melee
 
-*Attack Pattern*: 
+*Attack Pattern*: Frontal 1
 
 *Damage*:
 
