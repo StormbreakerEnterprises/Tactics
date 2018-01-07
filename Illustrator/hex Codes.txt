@@ -1,7 +1,9 @@
-#B2C300 - Yellow team unit color
+#f2ff2d - Yellow team unit color
 #1A00A8 - Blue team unit color
 #910000 - Red team unit color
 #e39800 - Orange team unit color
+#004404 - Green team unit color
+#58005b - Purple team unit color
 
 
 #482C00 - Weapon handles
