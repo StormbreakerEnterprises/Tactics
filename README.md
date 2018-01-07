@@ -13,11 +13,12 @@ Tactics is turn-based. On each turn, you:
 
 ## Units
 
-There are 3 units in Tactics. They are:
+There are 4 units in Tactics. They are:
 
 * Swordsman
 * Maceman
 * Spearman
+* Scout
 
 
 
@@ -61,6 +62,20 @@ Each unit has:
 *Sight*:
 
 ### Spearman
+
+*Attack Type*: Melee
+
+*Attack Pattern*: Frontal 1
+
+*Damage*:
+
+*Defense*:
+
+*Movement*:
+
+*Sight*:
+
+### Scout
 
 *Attack Type*: Melee
 
