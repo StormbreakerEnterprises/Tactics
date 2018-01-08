@@ -11,3 +11,4 @@
 #2A2A2A - Slightly Darker Weapon steel (Gray)
 #cc0000 - Instructions highlight (Red)
 50% - Instructions unit size
+#00E5F9 - Wizard lightning bolt (lightblue)
