@@ -13,9 +13,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.setFrameSize(NSMakeSize(1366, 768))
-        btn1.title = MenuStructure.instance.currentOptions[0].rawValue
-        btn2.title = MenuStructure.instance.currentOptions[1].rawValue
-        btn3.title = MenuStructure.instance.currentOptions[2].rawValue
+        btn1.title = "Skirmish"
+        btn2.title = "Campaign"
+        btn3.title = "Tutorial"
         // Do any additional setup after loading the view.
     }
 
@@ -32,32 +32,13 @@ class ViewController: NSViewController {
     
     
     @IBAction func btn1Pressed(_ sender: NSButton) {
-        MenuStructure.instance.location = BtnOptions.toLocation(MenuStructure.instance.currentOptions[0], MenuStructure.instance.location)
-        if MenuStructure.instance.currentOptions.isEmpty {
-            menuButtonsView.isHidden = true
-        }else {
-            btn1.title = MenuStructure.instance.currentOptions[0].rawValue
-            btn2.title = MenuStructure.instance.currentOptions[1].rawValue
-            btn3.title = MenuStructure.instance.currentOptions[2].rawValue
-        }
+        
     }
     @IBAction func btn2Pressed(_ sender: NSButton) {
-        if MenuStructure.instance.currentOptions.isEmpty {
-            menuButtonsView.isHidden = true
-        }else {
-            btn1.title = MenuStructure.instance.currentOptions[0].rawValue
-            btn2.title = MenuStructure.instance.currentOptions[1].rawValue
-            btn3.title = MenuStructure.instance.currentOptions[2].rawValue
-        }
+        
     }
     @IBAction func btn3Pressed(_ sender: NSButton) {
-        if MenuStructure.instance.currentOptions.isEmpty {
-            menuButtonsView.isHidden = true
-        }else {
-            btn1.title = MenuStructure.instance.currentOptions[0].rawValue
-            btn2.title = MenuStructure.instance.currentOptions[1].rawValue
-            btn3.title = MenuStructure.instance.currentOptions[2].rawValue
-        }
+        
     }
 }
 
