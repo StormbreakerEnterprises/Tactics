@@ -13,9 +13,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.setFrameSize(NSMakeSize(1366, 768))
-        newGameButton.title = "New Game"
-        loadGameButton.title = "Load Game"
-        tutorial.title = "Tutorial"
+        btn1.title = MenuStructure.instance.currentOptions[0].rawValue
+        btn2.title = MenuStructure.instance.currentOptions[1].rawValue
+        btn3.title = MenuStructure.instance.currentOptions[2].rawValue
         // Do any additional setup after loading the view.
     }
 
@@ -25,22 +25,41 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBOutlet weak var newGameButton: NSButton!
-    @IBOutlet weak var loadGameButton: NSButton!
-    @IBOutlet weak var tutorial: NSButton!
+    @IBOutlet weak var btn1: NSButton!
+    @IBOutlet weak var btn2: NSButton!
+    @IBOutlet weak var btn3: NSButton!
     @IBOutlet weak var menuButtonsView: NSStackView!
     
-    @IBAction func tutorialPressed(_ sender: NSButton) {
-        menuButtonsView.isHidden = true
-        print("tutorial")
+    
+    @IBAction func btn1Pressed(_ sender: NSButton) {
+        if MenuStructure.instance.location == Location.main {
+            <#code#>
+        }
+        if MenuStructure.instance.currentOptions.isEmpty {
+            menuButtonsView.isHidden = true
+        }else {
+            btn1.title = MenuStructure.instance.currentOptions[0].rawValue
+            btn2.title = MenuStructure.instance.currentOptions[1].rawValue
+            btn3.title = MenuStructure.instance.currentOptions[2].rawValue
+        }
     }
-    @IBAction func loadGamePressed(_ sender: NSButton) {
-        menuButtonsView.isHidden = true
-        print("load")
+    @IBAction func btn2Pressed(_ sender: NSButton) {
+        if MenuStructure.instance.currentOptions.isEmpty {
+            menuButtonsView.isHidden = true
+        }else {
+            btn1.title = MenuStructure.instance.currentOptions[0].rawValue
+            btn2.title = MenuStructure.instance.currentOptions[1].rawValue
+            btn3.title = MenuStructure.instance.currentOptions[2].rawValue
+        }
     }
-    @IBAction func newGamePressed(_ sender: NSButton) {
-        menuButtonsView.isHidden = true
-        print("new")
+    @IBAction func btn3Pressed(_ sender: NSButton) {
+        if MenuStructure.instance.currentOptions.isEmpty {
+            menuButtonsView.isHidden = true
+        }else {
+            btn1.title = MenuStructure.instance.currentOptions[0].rawValue
+            btn2.title = MenuStructure.instance.currentOptions[1].rawValue
+            btn3.title = MenuStructure.instance.currentOptions[2].rawValue
+        }
     }
 }
 

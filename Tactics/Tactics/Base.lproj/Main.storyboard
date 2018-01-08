@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -696,7 +697,7 @@
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fK3-D4-XGT">
                                 <rect key="frame" x="190" y="85" width="100" height="100"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-sh-OKS">
+                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-sh-OKS">
                                         <rect key="frame" x="4" y="63" width="92" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="1td-Cc-eT0"/>
@@ -707,7 +708,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="newGamePressed:" target="XfG-lQ-9wD" id="fbw-mx-yJ3"/>
+                                            <action selector="btn1Pressed:" target="XfG-lQ-9wD" id="BBK-TL-G3Z"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7kT-jZ-jHO">
@@ -721,10 +722,10 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="loadGamePressed:" target="XfG-lQ-9wD" id="7bw-Kb-mp8"/>
+                                            <action selector="btn2Pressed:" target="XfG-lQ-9wD" id="pc1-D3-Wur"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
                                         <rect key="frame" x="4" y="3" width="92" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Cxk-9x-fM8"/>
@@ -735,7 +736,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="tutorialPressed:" target="XfG-lQ-9wD" id="mtP-J1-WAT"/>
+                                            <action selector="btn3Pressed:" target="XfG-lQ-9wD" id="pXC-hH-9U1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -773,10 +774,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loadGameButton" destination="7kT-jZ-jHO" id="o4t-Jr-bc8"/>
+                        <outlet property="btn1" destination="Mgg-sh-OKS" id="51c-ah-apH"/>
+                        <outlet property="btn2" destination="7kT-jZ-jHO" id="xPs-s2-61U"/>
+                        <outlet property="btn3" destination="WMV-0v-TDp" id="6e0-oJ-oSS"/>
                         <outlet property="menuButtonsView" destination="fK3-D4-XGT" id="ZcK-Op-MTg"/>
-                        <outlet property="newGameButton" destination="Mgg-sh-OKS" id="PzG-b5-qEh"/>
-                        <outlet property="tutorial" destination="WMV-0v-TDp" id="Osg-f2-eAU"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
