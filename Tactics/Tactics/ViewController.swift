@@ -29,16 +29,22 @@ class ViewController: NSViewController {
     @IBOutlet weak var btn2: NSButton!
     @IBOutlet weak var btn3: NSButton!
     @IBOutlet weak var menuButtonsView: NSStackView!
+    @IBOutlet weak var background: NSImageView!
     
     
     @IBAction func btn1Pressed(_ sender: NSButton) {
-        
+        skirmish()
     }
     @IBAction func btn2Pressed(_ sender: NSButton) {
         
     }
     @IBAction func btn3Pressed(_ sender: NSButton) {
         
+    }
+    func skirmish(new: Bool = true) {
+        menuButtonsView.isHidden = true
+        "
+        background.image = NSImage(byReferencingFile: <#T##String#>)
     }
 }
 

@@ -697,7 +697,7 @@
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fK3-D4-XGT">
                                 <rect key="frame" x="190" y="85" width="100" height="100"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-sh-OKS">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-sh-OKS">
                                         <rect key="frame" x="4" y="63" width="92" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="1td-Cc-eT0"/>
@@ -725,7 +725,7 @@
                                             <action selector="btn2Pressed:" target="XfG-lQ-9wD" id="pc1-D3-Wur"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
+                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
                                         <rect key="frame" x="4" y="3" width="92" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Cxk-9x-fM8"/>
@@ -767,13 +767,22 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-mL-iIV">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="D75-wx-hlW"/>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="a9b-mL-iIV" secondAttribute="bottom" id="Bbf-Gy-HEf"/>
+                            <constraint firstItem="a9b-mL-iIV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="CXM-PB-dOf"/>
+                            <constraint firstItem="a9b-mL-iIV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="IcG-tu-qis"/>
                             <constraint firstItem="fK3-D4-XGT" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="otU-7M-TeE"/>
                             <constraint firstItem="fK3-D4-XGT" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sQa-H3-rQ3"/>
+                            <constraint firstAttribute="trailing" secondItem="a9b-mL-iIV" secondAttribute="trailing" id="sek-pf-mP1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="background" destination="a9b-mL-iIV" id="hud-tq-I3E"/>
                         <outlet property="btn1" destination="Mgg-sh-OKS" id="51c-ah-apH"/>
                         <outlet property="btn2" destination="7kT-jZ-jHO" id="xPs-s2-61U"/>
                         <outlet property="btn3" destination="WMV-0v-TDp" id="6e0-oJ-oSS"/>
