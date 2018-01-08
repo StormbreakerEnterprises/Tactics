@@ -29,7 +29,6 @@ There are 15 units in Tactics. They are:
 * Tank
 * Cannon
 * Medic
-* Healer
 
 
 
@@ -252,26 +251,13 @@ Ranged units also have:
 
 *Sight*: 3
 
-### Healer
-
-*Attack Type*: Melee
-
-*Attack Pattern*: 1 Tile Area of Effect
-
-*Damage*:
-
-*Defense*:
-
-*Movement*: 2
-
-*Sight*: 3
-
 ## Buildings
 
 Tactics also allows the construction of buildings. There are 2 buildings in the game:
 
 * Watchtower
-* Guard tower
+* Wall
+* Fort
 
 
 
