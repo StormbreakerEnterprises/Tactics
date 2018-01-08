@@ -279,5 +279,16 @@ Each building has:
 
 ### Wall
 
+*Health*:
+
+*Sight*:
+
+*Defense*:
+
 ### Fort
 
+*Health*:
+
+*Sight*:
+
+*Defense*:
