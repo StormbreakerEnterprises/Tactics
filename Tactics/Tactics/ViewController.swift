@@ -32,9 +32,7 @@ class ViewController: NSViewController {
     
     
     @IBAction func btn1Pressed(_ sender: NSButton) {
-        if MenuStructure.instance.location == Location.main {
-            <#code#>
-        }
+        MenuStructure.instance.location = BtnOptions.toLocation(MenuStructure.instance.currentOptions[0], MenuStructure.instance.location)
         if MenuStructure.instance.currentOptions.isEmpty {
             menuButtonsView.isHidden = true
         }else {

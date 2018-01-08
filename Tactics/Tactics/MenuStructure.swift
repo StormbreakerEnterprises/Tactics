@@ -14,7 +14,7 @@ class MenuStructure {
     static var instance: MenuStructure = MenuStructure()
     private init() {
         location = Location.main
-        map = [Location.main: [btnOptions.Skirmish, btnOptions.Campaign, btnOptions.Tutorial], Location.skirmish: [btnOptions.New, btnOptions.Load, btnOptions.Back], Location.campaign: [btnOptions.New, btnOptions.Load, btnOptions.Back]]
+        map = [Location.main: [BtnOptions.Skirmish, BtnOptions.Campaign, BtnOptions.Tutorial], Location.skirmish: [BtnOptions.New, BtnOptions.Load, BtnOptions.Back], Location.campaign: [BtnOptions.New, BtnOptions.Load, BtnOptions.Back]]
         currentOptions = map[location]!
     }
     var location: Location {
@@ -22,19 +22,27 @@ class MenuStructure {
             currentOptions = map[location]!
         }
     }
-    let map: [Location:[btnOptions]]
-    var currentOptions: [btnOptions]
+    let map: [Location:[BtnOptions]]
+    var currentOptions: [BtnOptions]
 }
 enum Location {
     case main
     case skirmish
     case campaign
 }
-enum btnOptions: String {
+enum BtnOptions: String {
     case Skirmish = "Skirmish"
     case Campaign = "Campaign"
     case Tutorial = "Tutorial"
     case New = "New"
     case Load = "Load"
     case Back = "Back"
+    func toLocation(button btnOption: BtnOptions, from: Location) -> Location {
+        switch <#value#> {
+        case <#pattern#>:
+            <#code#>
+        default:
+            <#code#>
+        }
+    }
 }
