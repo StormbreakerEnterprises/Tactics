@@ -45,12 +45,19 @@ class ViewController: NSViewController {
         
     }
     @IBAction func blueSwordsmanClicked(_ sender: NSButton) {
+        blueSwordsman.layer?.shadowOffset = CGSize(width: 25, height: 25)
+        blueSwordsman.layer?.shadowColor = CGColor(red: 0, green: 255, blue: 0, alpha: 1)
+        blueSwordsman.layer?.shadowOpacity = 0.5
+        blueSwordsman.layer?.cornerRadius = 5
+        //blueSwordsman.layer?.borderColor = CGColor(red: 0, green: 255, blue: 0, alpha: 1)
+        //blueSwordsman.layer?.borderWidth = 1
     }
     func skirmish(new: Bool = true) {
         menuButtonsView.isHidden = true
         background.isHidden = false
         blueSwordsman.isHidden = false
-        //background.image = NSImage(byReferencingFile: <#T##String#>)
+        blueSwordsman.frame.origin.y = self.view.frame.origin.y + (self.view.frame.size.height / 2) - (blueSwordsman.frame.size.height / 2) - 42.5
+        blueSwordsman.frame.origin.x = self.view.frame.origin.x + (self.view.frame.size.width / 2) - (blueSwordsman.frame.size.width / 2)
     }
 }
 
