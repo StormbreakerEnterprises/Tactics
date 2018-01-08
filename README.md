@@ -13,7 +13,7 @@ Tactics is turn-based. On each turn, you:
 
 ## Units
 
-There are 15 units in Tactics. They are:
+There are 14 units in Tactics. They are:
 
 * Swordsman
 * Maceman
@@ -253,7 +253,7 @@ Ranged units also have:
 
 ## Buildings
 
-Tactics also allows the construction of buildings. There are 2 buildings in the game:
+Tactics also allows the construction of buildings. There are 3 buildings in the game:
 
 * Watchtower
 * Wall
@@ -264,3 +264,20 @@ Tactics also allows the construction of buildings. There are 2 buildings in the 
 Each building has:
 
 * Health
+* Sight
+* Defense
+
+
+
+### Watchtower
+
+*Health*:
+
+*Sight*: 5
+
+*Defense*:
+
+### Wall
+
+### Fort
+
