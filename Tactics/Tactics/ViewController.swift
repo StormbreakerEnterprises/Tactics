@@ -16,6 +16,8 @@ class ViewController: NSViewController {
         btn1.title = "Skirmish"
         btn2.title = "Campaign"
         btn3.title = "Tutorial"
+        background.isHidden = true
+        blueSwordsman.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +32,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var btn3: NSButton!
     @IBOutlet weak var menuButtonsView: NSStackView!
     @IBOutlet weak var background: NSImageView!
+    @IBOutlet weak var blueSwordsman: NSButton!
     
     
     @IBAction func btn1Pressed(_ sender: NSButton) {
@@ -41,10 +44,13 @@ class ViewController: NSViewController {
     @IBAction func btn3Pressed(_ sender: NSButton) {
         
     }
+    @IBAction func blueSwordsmanClicked(_ sender: NSButton) {
+    }
     func skirmish(new: Bool = true) {
         menuButtonsView.isHidden = true
-        "
-        background.image = NSImage(byReferencingFile: <#T##String#>)
+        background.isHidden = false
+        blueSwordsman.isHidden = false
+        //background.image = NSImage(byReferencingFile: <#T##String#>)
     }
 }
 
