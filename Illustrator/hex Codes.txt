@@ -14,3 +14,5 @@
 #00E5F9 - Wizard lightning bolt (lightblue)
 #748400 - selection color (Gold)
 #000903 - tank tracks (Black)
+#006805 - Ground color (green)
+#003002 - Tree color (green)
