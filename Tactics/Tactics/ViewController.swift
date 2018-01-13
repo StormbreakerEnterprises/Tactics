@@ -16,8 +16,9 @@ class ViewController: NSViewController {
         btn1.title = "Skirmish"
         btn2.title = "Campaign"
         btn3.title = "Tutorial"
-        background.isHidden = true
+        //background.isHidden = true
         blueSwordsman.isHidden = true
+        background.image = #imageLiteral(resourceName: "lobbyBackround")
         // Do any additional setup after loading the view.
     }
 
@@ -55,6 +56,7 @@ class ViewController: NSViewController {
     func skirmish(new: Bool = true) {
         menuButtonsView.isHidden = true
         background.isHidden = false
+        background.image = #imageLiteral(resourceName: "testHexBoard")
         blueSwordsman.isHidden = false
         blueSwordsman.frame.origin.y = self.view.frame.origin.y + (self.view.frame.size.height / 2) - (blueSwordsman.frame.size.height / 2) - 42.5
         blueSwordsman.frame.origin.x = self.view.frame.origin.x + (self.view.frame.size.width / 2) - (blueSwordsman.frame.size.width / 2)
