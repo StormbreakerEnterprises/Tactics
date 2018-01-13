@@ -711,7 +711,7 @@
                                             <action selector="btn1Pressed:" target="XfG-lQ-9wD" id="BBK-TL-G3Z"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kT-jZ-jHO">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7kT-jZ-jHO">
                                         <rect key="frame" x="4" y="33" width="92" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="2CC-1p-YfV"/>
@@ -725,7 +725,7 @@
                                             <action selector="btn2Pressed:" target="XfG-lQ-9wD" id="pc1-D3-Wur"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
+                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-0v-TDp">
                                         <rect key="frame" x="4" y="3" width="92" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Cxk-9x-fM8"/>
