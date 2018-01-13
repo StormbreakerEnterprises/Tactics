@@ -58,6 +58,8 @@ class ViewController: NSViewController {
         blueSwordsman.isHidden = false
         blueSwordsman.frame.origin.y = self.view.frame.origin.y + (self.view.frame.size.height / 2) - (blueSwordsman.frame.size.height / 2) - 42.5
         blueSwordsman.frame.origin.x = self.view.frame.origin.x + (self.view.frame.size.width / 2) - (blueSwordsman.frame.size.width / 2)
+        var bS2 = NSButton(image: #imageLiteral(resourceName: "blue"), target: nil, action: nil)
+        self.view.addSubview(bS2)
     }
 }
 
