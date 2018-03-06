@@ -1,14 +1,14 @@
 //
-//  Unit.swift
+//  Board.swift
 //  Tactics
 //
-//  Created by Sam Gauck on 1/17/18.
+//  Created by Sam Gauck on 3/6/18.
 //  Copyright © 2018 Sam Gauck. All rights reserved.
 //
 
 import Foundation
 import Cocoa
-class Unit: NSButton {
+class Hex: NSButton {
     var x: CGFloat {
         get {
             return self.frame.origin.x + (self.frame.size.width / 2)
@@ -25,8 +25,21 @@ class Unit: NSButton {
             self.frame.origin.y = newY - (self.frame.size.width / 2)
         }
     }
-    func moveToHex(_ destinationHex: Hex) {
-        self.x = destinationHex.x
-        self.y = destinationHex.y - 45
+}
+class Board {
+    var board: [[Hex]] = [[]]
+    init(cols x: Int, rows y: Int) {
+        for col in 0..<x {
+            if (col % 2 == 1) {
+                for row in 0..<(y-1) {
+                    board[col][row] = Hex()
+                }
+            } else {
+                for row in 0..<y {
+                    board[col][row] = Hex()
+                }
+            }
+        }
+        
     }
 }
