@@ -8,6 +8,35 @@
 
 import Foundation
 import Cocoa
+enum Color: String {
+    case Blue = "Blue"
+    case Green = "Green"
+    case Orange = "Orange"
+    case Purple = "Purple"
+    case Red = "Red"
+    case Yellow = "Yellow"
+    init(_ color: Character) {
+        switch color {
+        case "b":
+            self = .Blue
+        case "g":
+            self = .Green
+        case "o":
+            self = .Orange
+        case "p":
+            self = .Purple
+        case "r":
+            self = .Red
+        case "y":
+            self = .Yellow
+        default:
+            self = .Blue
+        }
+    }
+    func toChar() -> String {
+        return String(self.rawValue.prefix(upTo: String.Index.init(encodedOffset: 1))).lowercased()
+    }
+}
 class Unit: NSButton {
     var x: CGFloat {
         get {

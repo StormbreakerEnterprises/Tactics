@@ -62,6 +62,12 @@ class ViewController: NSViewController {
         blueSwordsman.frame.origin.x = self.view.frame.origin.x + (self.view.frame.size.width / 2) - (blueSwordsman.frame.size.width / 2)
         var bS2 = NSButton(image: #imageLiteral(resourceName: "blue"), target: nil, action: nil)
         self.view.addSubview(bS2)
+        var b = Color.Blue
+        var bb = Color("b")
+        print(b.rawValue)
+        print(bb.rawValue)
+        print(b.toChar())
+        print(bb.toChar())
     }
 }
 
