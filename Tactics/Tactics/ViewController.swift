@@ -16,7 +16,7 @@ class ViewController: NSViewController {
         btn1.title = "Skirmish"
         btn2.title = "Campaign"
         btn3.title = "Tutorial"
-        //background.isHidden = true
+        background.isHidden = true
         blueSwordsman.isHidden = true
         background.image = #imageLiteral(resourceName: "lobbyBackround")
         // Do any additional setup after loading the view.
@@ -62,12 +62,7 @@ class ViewController: NSViewController {
         blueSwordsman.frame.origin.x = self.view.frame.origin.x + (self.view.frame.size.width / 2) - (blueSwordsman.frame.size.width / 2)
         var bS2 = NSButton(image: #imageLiteral(resourceName: "blue"), target: nil, action: nil)
         self.view.addSubview(bS2)
-        var b = Color.Blue
-        var bb = Color("b")
-        print(b.rawValue)
-        print(bb.rawValue)
-        print(b.toChar())
-        print(bb.toChar())
+        var b = Board(cols: 2, rows: 2)
     }
 }
 
