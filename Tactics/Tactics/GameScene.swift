@@ -52,7 +52,31 @@ class GameScene: SKScene {
         }
     }
     
-    func rand(max upperBound: Int) -> Int {
+    func rand(max upperBound: Int) -> Int { //max is inclusive
         return GKARC4RandomSource().nextInt(upperBound: upperBound + 1)
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        let location = event.location(in: board[0][0])
+        let nodes = self.nodes(at: location)
+        print(location)
+        print(board[0][0].size)
+        board[0][0].alpha = 0.5
+        board[0][0].position = CGPoint(x: 100, y: 100)
+        for node in nodes {
+            print(node.name)
+            let x = CGMutablePath.init()
+            x.move(to: CGPoint(x: -51, y: 0))
+            x.addLine(to: CGPoint(x: -20.5, y: 44))
+            x.addLine(to: CGPoint(x: 20.5, y: 44))
+            x.addLine(to: CGPoint(x: 51, y: 0))
+            x.addLine(to: CGPoint(x: 20.5, y: -44))
+            x.addLine(to: CGPoint(x: -20.5, y: -44))
+            x.addLine(to: CGPoint(x: -51, y: 0))
+            if (x.contains(location)) {
+                print(true)
+            }
+        }
+        print(nodes.count)
     }
 }
