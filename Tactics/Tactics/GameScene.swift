@@ -16,7 +16,7 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         // Setup
-        setupBoard(x: 2, y: 2)
+        setupBoard(x: 3, y: 3)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -48,6 +48,12 @@ class GameScene: SKScene {
             if hayCenterRow {
                 let centerRow: Int = ((rows-1)/2)+1
                 board[centerCol][centerRow].position = CGPoint.zero
+                //This takes the number of hexes above and below thhe center hex and iterates that many times. Each iteration, it sets thhe corresponding hex to the height of all the other hexes + 1 hex
+                let num = (board[centerCol].count - 1)/2
+                for i in 1...num {
+                    board[centerCol][centerRow + i - 1].position = CGPoint(x: 0, y: 88*i)
+                    board[centerCol][centerRow - i - 1].position = CGPoint(x: 0, y: -88*i)
+                }
             }
         }
     }
