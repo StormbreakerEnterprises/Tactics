@@ -48,6 +48,19 @@ class GameScene: SKScene {
             if hayCenterRow {
                 let centerRow: Int = ((rows-1)/2)+1
                 board[centerCol][centerRow].position = CGPoint.zero
+                
+                let hNum = (board.count - 1)/2
+                for hI in 0...hNum {
+                    let vNum = (board[centerCol].count - 1)/2
+                    for vI in 0...vNum {
+                        board[centerCol + hI - 1][centerRow + vI - 1].position = CGPoint(x: (102-25.78759)*Double(hI), y: Double(88*vI))
+                        board[centerCol + hI - 1][centerRow - vI - 1].position = CGPoint(x: (102-25.78759)*Double(hI), y: Double(-88*vI))
+                    }
+                    for vI in 0...vNum {
+                        board[centerCol - hI - 1][centerRow + vI - 1].position = CGPoint(x: (-102+25.78759)*Double(hI), y: Double(88*vI))
+                        board[centerCol - hI - 1][centerRow - vI - 1].position = CGPoint(x: (-102+25.78759)*Double(hI), y: Double(-88*vI))
+                    }
+                }
                 //This takes the number of hexes above and below thhe center hex and iterates that many times. Each iteration, it sets thhe corresponding hex to the height of all the other hexes + 1 hex
                 let num = (board[centerCol].count - 1)/2
                 for i in 1...num {
