@@ -16,14 +16,11 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         // Setup
-        setupBoard(x: 3, y: 3)
+        setupBoard(x: 11, y: 5)
     }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        if GKARC4RandomSource().nextInt(upperBound: 100) < 5 {
-            board[rand(max: 1)][rand(max: 1)].run(SKAction.moveBy(x: CGFloat(rand(max: 2) - 1), y: CGFloat(rand(max: 2) - 1), duration: TimeInterval(rand(max: 10))))
-        }
     }
     
     func removeUnit(_ unit: SKSpriteNode) {
