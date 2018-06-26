@@ -57,26 +57,26 @@ class GameScene: SKScene {
     }
     
     override func mouseDown(with event: NSEvent) {
-        let location = event.location(in: board[0][0])
+        let location = event.location(in: self)
         let nodes = self.nodes(at: location)
-        print(location)
-        print(board[0][0].size)
-        board[0][0].alpha = 0.5
-        board[0][0].position = CGPoint(x: 100, y: 100)
         for node in nodes {
-            print(node.name)
-            let x = CGMutablePath.init()
-            x.move(to: CGPoint(x: -51, y: 0))
-            x.addLine(to: CGPoint(x: -20.5, y: 44))
-            x.addLine(to: CGPoint(x: 20.5, y: 44))
-            x.addLine(to: CGPoint(x: 51, y: 0))
-            x.addLine(to: CGPoint(x: 20.5, y: -44))
-            x.addLine(to: CGPoint(x: -20.5, y: -44))
-            x.addLine(to: CGPoint(x: -51, y: 0))
-            if (x.contains(location)) {
+            let location = event.location(in: node)
+            if (Hex.clickIsInHex(location: location)) {
                 print(true)
             }
         }
-        print(nodes.count)
+    }
+}
+class Hex: SKSpriteNode {
+    static func clickIsInHex(x: CGFloat, y: CGFloat) -> Bool {
+        let step1 = y < 44 && x < 51 && x > -51 && y > -44
+        let step2 = y < ((88/61) * x) + 73.574
+        let step3 = y > ((88/61) * x) - 73.574
+        let step4 = y < ((-88/61) * x) + 73.574
+        let step5 = y > ((-88/61) * x) - 73.574
+        return step1 && step2 && step3 && step4 && step5
+    }
+    static func clickIsInHex(location: CGPoint) -> Bool {
+        return clickIsInHex(x: location.x, y: location.y)
     }
 }
