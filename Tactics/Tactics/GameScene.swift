@@ -12,11 +12,12 @@ import GameplayKit
 class GameScene: SKScene {
     
     var units: [SKSpriteNode] = []
+    //origin of board is bottom left corner
     var board: [[SKSpriteNode]] = [[]]
     
     override func didMove(to view: SKView) {
         // Setup
-        setupBoard(x: 11, y: 5)
+        setupBoard(x: 3, y: 3)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -40,24 +41,45 @@ class GameScene: SKScene {
         }
         let hayCenterCol: Bool = cols % 2 != 0
         let hayCenterRow: Bool = rows % 2 != 0
+        var centerCol: Int? = nil
+        var centerRow: Int? = nil
         if hayCenterCol {
-            let centerCol: Int = ((cols-1)/2)+1
-            if hayCenterRow {
-                let centerRow: Int = ((rows-1)/2)+1
-                board[centerCol][centerRow].position = CGPoint.zero
-                
-                let hNum = (board.count - 1)/2
-                for hI in 0...hNum {
-                    let vNum = (board[centerCol].count - 1)/2
-                    for vI in 0...vNum {
-                        board[centerCol + hI - 1][centerRow + vI - 1].position = CGPoint(x: (102-25.78759)*Double(hI), y: hI%2==0 ? Double(88*vI) : Double(88*vI)-44)
-                        board[centerCol + hI - 1][centerRow - vI - 1].position = CGPoint(x: (102-25.78759)*Double(hI), y: hI%2==0 ? Double(-88*vI) : Double(-88*vI)-44)
-                    }
-                    for vI in 0...vNum {
-                        board[centerCol - hI - 1][centerRow + vI - 1].position = CGPoint(x: (-102+25.78759)*Double(hI),y: hI%2==0 ? Double(88*vI) : Double(88*vI)-44)
-                        board[centerCol - hI - 1][centerRow - vI - 1].position = CGPoint(x: (-102+25.78759)*Double(hI), y: hI%2==0 ? Double(-88*vI) : Double(-88*vI)-44)
-                    }
+            centerCol = ((cols-1)/2)+1
+        }
+        if hayCenterRow {
+            centerRow = ((rows-1)/2)+1
+        }
+        if hayCenterCol && hayCenterRow {
+            board[centerCol!][centerRow!].position = CGPoint.zero
+            
+            let hNum = (board.count - 1)/2
+            for hI in 0...hNum {
+                let vNum = (board[centerCol!].count - 1)/2
+                for vI in 0...vNum {
+                    board[centerCol! + hI - 1][centerRow! + vI - 1].position = CGPoint(x: (102-25.78759)*Double(hI), y: hI%2==0 ? Double(88*vI) : Double(88*vI)-44)
+                    board[centerCol! + hI - 1][centerRow! - vI - 1].position = CGPoint(x: (102-25.78759)*Double(hI), y: hI%2==0 ? Double(-88*vI) : Double(-88*vI)-44)
                 }
+                for vI in 0...vNum {
+                    board[centerCol! - hI - 1][centerRow! + vI - 1].position = CGPoint(x: (-102+25.78759)*Double(hI),y: hI%2==0 ? Double(88*vI) : Double(88*vI)-44)
+                    board[centerCol! - hI - 1][centerRow! - vI - 1].position = CGPoint(x: (-102+25.78759)*Double(hI), y: hI%2==0 ? Double(-88*vI) : Double(-88*vI)-44)
+                }
+            }
+        } else if hayCenterRow {
+            board = []
+            setupBoard(x: cols + 1, y: rows)
+            for hex in board[board.count - 1] {
+                hex.removeFromParent()
+            }
+            board.remove(at: board.count - 1)
+        } else /*if hayCenterCol*/ {
+            board = []
+            setupBoard(x: cols, y: rows + 1)
+            for col in board {
+                col[col.count - 1].removeFromParent()
+//                col.remove(at: col.count - 1)
+            }
+            for i in 1...board.count {
+                board[i-1].remove(at: board[i-1].count-1)
             }
         }
     }
